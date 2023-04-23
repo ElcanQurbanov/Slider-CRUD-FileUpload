@@ -1,0 +1,42 @@
+﻿@model Blog
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container my-5">
+    <h1 style="text-align:center">Blog edit</h1>
+    <div class="blog-content my-5">
+        <img style="width:400px; height:200px;" src="~/img/@Model.Image" />
+    </div>
+    <form class="form-sample" asp-action="Edit" method="post" enctype="multipart/form-data">
+
+        <input class="form-control" id="customFile" asp-for="Photo" />
+        <span class="text-danger" asp-validation-for="Photo"></span>
+
+        <h4 class="my-3">Header</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Header" />
+        <span class="text-danger" asp-validation-for="Header"></span>
+
+        <h4 class="my-3">Description</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Description" />
+        <span class="text-danger" asp-validation-for="Description"></span>
+
+        <h4 class="my-3">Date</h4>
+        <input type="datetime-local" class="form-control" id="customFile" asp-for="Date" />
+        <span class="text-danger" asp-validation-for="Date"></span>
+
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+
+    </form>
+
+</div>
+  
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+

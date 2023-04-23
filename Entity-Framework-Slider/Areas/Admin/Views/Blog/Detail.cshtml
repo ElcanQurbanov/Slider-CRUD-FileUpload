@@ -1,0 +1,24 @@
+﻿@model Blog
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+    <h1>Blog detail</h1>
+    <div class="slider-content">
+        <img style="width:400px; height:200px;" src="~/img/@Model.Image" />
+    </div>
+    <div class="my-3">
+        <h4>Header</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Header" disabled="disabled" />
+        <h4 class="my-3">Description</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Description" disabled="disabled" />
+        <h4 class="my-3">Date</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Date" disabled="disabled" />
+    </div>
+    <a class="btn btn-info mt-3" asp-action="Index">
+        Back
+    </a>
+</div>
+

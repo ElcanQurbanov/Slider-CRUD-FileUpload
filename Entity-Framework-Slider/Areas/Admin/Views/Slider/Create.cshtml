@@ -1,0 +1,18 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <h1 style="color:darkcyan; text-align:center">Slider create</h1>
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+        <input class="form-control mt-5" id="customFile" asp-for="Photo"/>
+        <span class="text-danger" asp-validation-for="Photo"></span>
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
+
+
